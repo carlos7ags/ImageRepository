@@ -15,7 +15,7 @@ def path_and_rename(instance, filename):
 
 class Image(models.Model):
     image_id = models.AutoField(primary_key=True)
-    image = models.ImageField(upload_to=path_and_rename, null=True, max_length=255)
+    image = models.ImageField(upload_to=path_and_rename, max_length=255)
     owner = models.TextField(null=True, max_length=255)
     title = models.TextField(null=True, max_length=255)
     description = models.TextField(null=True, max_length=255)
